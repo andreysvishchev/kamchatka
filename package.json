@@ -5,9 +5,9 @@
   "main": "gulpfile.js",
   "scripts": {
     "html": "node-w3c-validator -f lint -evH -i app/**/*.html",
-		"dev": "gulp",
-		"build": "gulp build",
-		"cache": "gulp cache",
+    "dev": "gulp",
+    "build": "gulp build",
+    "cache": "gulp cache",
     "backend": "gulp backend",
     "code": "editorconfig-checker"
   },
@@ -29,7 +29,7 @@
     "gulp-file-include": "^2.3.0",
     "gulp-htmlmin": "^5.0.1",
     "gulp-if": "^3.0.0",
-    "gulp-image": "^6.2.1",
+    "gulp-imagemin": "^7.1.0",
     "gulp-notify": "^3.2.0",
     "gulp-rev": "^9.0.0",
     "gulp-rev-delete-original": "^0.2.3",

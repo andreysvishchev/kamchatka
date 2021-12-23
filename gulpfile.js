@@ -15,7 +15,7 @@ const revDel = require('gulp-rev-delete-original');
 const htmlmin = require('gulp-htmlmin');
 const gulpif = require('gulp-if');
 const notify = require('gulp-notify');
-const image = require('gulp-image');
+const image = require('gulp-imagemin');
 const { readFileSync } = require('fs');
 const concat = require('gulp-concat');
 
@@ -66,7 +66,7 @@ const scripts = () => {
 		.pipe(gulpif(isProd, uglify().on("error", notify.onError())))
 		.pipe(dest('./app/js/'))
   return src(
-    ['./src/js/functions/**.js', './src/js/components/**.js', './src/js/main.js'])
+    ['./src/js/global.js', './src/js/components/**.js', './src/js/main.js'])
     .pipe(gulpif(!isProd, sourcemaps.init()))
 		.pipe(babel({
 			presets: ['@babel/env']
